@@ -1,0 +1,35 @@
+Display Name of the salesperson, customer name and amount of sales. 
+List employee name and name of managers.
+SELECT e.ENAME AS Employee,
+    ->        m.ENAME AS Manager
+    -> FROM emp e
+    -> LEFT JOIN emp m
+    -> ON e.MGR = m.EMPNO;
+
+Display details of all departments and the corresponding employees
+SELECT d.DEPTNO,
+    ->        d.DNAME,
+    ->        d.LOC,
+    ->        e.EMPNO,
+    ->        e.ENAME,
+    ->        e.JOB,
+    ->        e.SAL
+    -> FROM dept d
+    -> LEFT JOIN emp e
+    -> ON d.DEPTNO = e.DEPTNO;
+ 
+Display all customer names with their order details (order number and ship date) for the orders shipped in 1987.
+select c.name,o.ordid,o.shipdate from ord o join customer c on o.custid= c.custid where year(o.shipdate)=1987;
+
+Display salesman names and names of customers they are dealing with.
+select s.sname,c.cname from customers c join salespeople s on s.snum = c.snum;
+
+Display salesman who did not earn commission, with customer names whom they are dealing with.
+	
+Display salesman names, salary, commission and their salary grades.
+Display all Tennis products and their price details (standard and minimum price).
+Display the products purchased by either JOCKSPORTS (customer number 100) or JUST TENNIS (customer number 103) or both of them.
+Display the department name, and salary of any employee whose salary and commission matches both the salary and commission of any employee in DALLAS.
+List out the common jobs in Research and Accounting Departments in ascending order.
+
+

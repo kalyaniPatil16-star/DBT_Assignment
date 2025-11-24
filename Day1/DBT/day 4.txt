@@ -1,0 +1,95 @@
+Count total no. of employees.
+->select count(*) from emp;
+
+ Determine the maximum and minimum salary.
+->select max(sal)"maximum",min(sal)"minimum" from emp;
+
+ Display the count of employees having salary greater than 3000.
+-> select count(*) from emp where sal>3000;
+
+ Print department wise count of employees.
+-select deptno ,count(*) from emp group by deptno;
+
+ Display employee details who earn maximum and minimum salary.
+-select * from emp where sal=(select min(sal)from emp) or (select max(sal) from emp);
+
+ Print jobwise total salary.
+-select job,sum(sal) from emp group by job;
+ Print department wise maximum salary.
+-select deptno,max(sal) from emp group by deptno;
+
+ Print jobwise average salary.
+ -select job,avg(sal) from emp group by job;
+
+ Print count of employee working in department 20.
+-select count(*) from emp where deptno=20;
+
+ Print count of employee working in department 10 having job as MANAGER.
+select count(*) from emp where deptno=10 and job="manager".
+
+ Print count of employee working in department 20 having comm as null.
+select count(*) from emp where deptno=20 and comm is null;
+
+
+Print names of employees working in ACCOUNTS department having maximum salary.
+ select count(*) from emp where job='clerk' and (select max(sal)from emp) ;
+
+ Print employee details having salary less than average salary of MANAGER.
+
+
+Give SQL statement to find the average annual salary per job in each detp.
+select avg(sal) from emp group by deptno;
+
+Count the number of people in the dept 30 who receive a salary and the no.of people who receive comm.
+select count(sal),count(comm) from emp where deptno=30;
+
+Calculate the avg, min and max salary of those groups of employees having the job as CLERK or MANAGER.
+select avg(sal) ,min(sal),max(sal) from emp where job='clerk' or job='manager';
+
+Display the deptno of departments which have more than one CLERK.
+select deptno from emp where job='clerk' group by deptno having count(*)>1;
+
+
+List names and hiredates of employees who were hired in the month of December
+
+List names and hiredate of employees hired in the year 1980
+Display names and jobs of the people separated by a hyphen. Capitalize the first character of name and job.
+List employee numbers, names and hiredates of the people working in the department number 20, display the hiredates in the dd/mm/yy format
+Find number of months the president has worked for the company. 
+Find the day of the week on which SMITH joined
+Find the time of time of the day in which ADAMS joined
+Find day of month on which KING joined
+Find out month on which MARTIN joined
+Find out which quarter of the year the employees joined. Display their number and names as well
+Retrieve ANALYST records with the hiredate formatted as – ‘The 3rd of December 1984’
+List all names, jobs, and a job classification number, which is to be assigned by you. Translate the value started in each job field to a job classification number. This is to be done as follows-
+CLERK
+MANAGER
+PRESIDENT
+OTHER
+Display the length of the longest employees name 
+Write a query to list the length of service of the employees (of the form n years and m months).
+How many employees who are joined in 1985.
+How many employees joined each month in 1985.
+How many employees who are joined in March 1985.
+Find the total sales amount
+Find the customer-wise lowest and highest sales amount
+Find product-wise lowest, highest and total sales.
+Find department-wise average salary for all the departments employing more than three employees
+Find the customer-wise total sales for all the customers except ‘TKB SPORT SHOP’ who came to purchase various sports items maximum four times.
+Display the highest, lowest, sum and average salary for all employees. Label the columns appropriately.
+Modify the above query and display the output for each job type.
+List names of people who have salary less than the average salary for dept 20
+Find the average annual salary per job in each department. 
+Count the number of people in department 30 who receive a salary and the number of people who receive a commission
+Compute the average, minimum and maximum salaries of these groups of employees having job as Clerk or manager, Display the job as well
+Write an SQL command that displays 2nd highest salary paid
+Write a query to find the employees who are earning the maximum salary in their departments.
+Write a query to find the salesman number (repid) who has achieved the maximum total sales among the entire salesman.
+List the highest salary paid for each job.
+Find the most recently hired employee in each department.
+In which year did most people join the company? Display the year and the number of employees.
+Write a query to display employee name whose name occurs only once in the table.
+Write a query to display all the details from dept table along with the no. of employee working in each dept.
+Find out which department does not have any employees.
+List out the no. of employees joined in every month in ascending order.
